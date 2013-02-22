@@ -1,0 +1,47 @@
+#playarea
+{
+    margin:0 auto;
+    padding:0 auto;
+    width:320px;
+}
+#area
+{
+    float:left;
+}
+#next
+{
+    float:right;
+    margin:50px 0;
+}
+#control
+{
+    margin:0 auto;
+    padding:0 auto;
+    text-align:center;
+    line-height:30px;
+    font-weight:bold;
+}
+#start
+{
+    cursor:pointer;
+    color:Red;
+}
+    
+.ulblock
+{
+    margin: 0;
+    padding: 0;
+}
+.liblock
+{
+    list-style: none;
+    border-left: 1px solid #666;
+    border-top: 1px solid #666;
+    width: 20px;
+    height: 20px;
+    float: left;
+    background: #333;
+}
+.blockbg{
+    background: #FFF;
+}
