@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Horse</title>
+        <style type="text/css">
+            body{margin:0;padding:0;}
+            #parent{width:469px;height:162px;margin:0 auto;padding:0;cursor:pointer;overflow:hidden;position:relative;}
+            #horse{background:url("horse.jpg") left top;width:1608px;height:162px;position:absolute;left:0;top:0;z-index:-1;}
+            #parent img{_filter:alpha(opacity=50);}
+        </style>
+        
+<script type="text/javascript">
+    //运动函数，参数各种没验证
+    function run(node,length,width,speed) {
+        var left = 0,
+            index = 1;
+        setTimeout(function() {
+            if(index <= width) {
+                //当步长<单幅画的宽度，滑动
+                (left -= index) <= -length && (left = 0);
+                index += 0.8;
+            } else{ //移动速度>单幅画的宽度，闪动
+                (left -= width) <= -length && (left = 0);
+            }
+
+            node.style.left = left+'px';
+            setTimeout(arguments.callee,speed);
+        }, 0);
+    }
+    
+    window.onload = function() {
+        //防止重复点击
+        var first = true;
+        document.getElementById('parent').onclick = function(){
+            first && run(document.getElementById('horse'), 804, 67, 40);
+            first = false;
+        }
+    }
+</script>
+
+    </head>
+    <body>
+        <div id="parent">
+            <div id="horse"></div>
+            <img src="bg.png"></div>
+        </div>
+    </body>
+</html>
