@@ -1,0 +1,7 @@
+#canvas{margin: 0 auto;}
+ul{list-style: none;margin: 0;padding: 0;}
+li{width: 10px;height: 10px;float: left;margin: 0;padding: 0;display: block;overflow: hidden;}
+.wall{background: #AAA;}
+.body{background: #369;}
+.bean{background: #369;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.head{background: #000;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;}
