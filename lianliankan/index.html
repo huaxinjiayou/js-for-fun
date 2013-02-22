@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript" src="action.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            window.onload = function(){
+                var game = new Game({
+                    ground: document.getElementById('canvas'),
+                    xCount: 10,
+                    yCount: 10,
+                    length: 50,
+                    border: 1,
+                    typeCount: 22,//出现的图片种类数目
+                    allTypeCount: 22//总共有的图片数目
+                });
+                game.init();
+                game.start();
+                
+                document.getElementById('note').onclick = function(){
+                    game.showNote();
+                }
+                document.getElementById('reload').onclick = function(){
+                    game.reload();
+                }
+            };
+        </script>
+        <title>连连看</title>
+    </head>
+    <body>
+        <div class="action">
+            <span id="note" class="pointer">提示</span>
+            <span id="reload" class="pointer">重排</span>
+        </div>
+        <div id="canvas"></div>
+    </body>
+</html>
