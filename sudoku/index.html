@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>数独</title>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="sudoku.js"></script>
+    <script>
+        window.onload = function() {
+            var sudoku = new Sudoku([]);
+            sudoku.addEvent();
+        };
+    </script>
+</head>
+<body>
+    <div id="selection"></div>
+    <div id="container"></div>
+    <div id="action">
+        <span id="resolve">解答</span>
+        <span id="clear">清除</span>
+        <span>PS:题目来自某段时间公司厕所后面的贴纸,有难度,解答时浏览器会有短暂卡死</span>
+    </div>
+    <div id="solution"></div>
+</body>
+</html>

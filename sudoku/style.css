@@ -1,0 +1,52 @@
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    float: left;
+    width: 30px;
+    height: 30px;
+    color: #333;
+    line-height: 30px;
+    border-top: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    text-align: center;
+    cursor: pointer;
+}
+#container ul, #solution ul{
+    width: 280px;
+    height: 280px;
+}
+#selection{
+    height: 32px;
+    margin-bottom: 10px;
+}
+#selection ul{
+    width: 311px;
+    height: 32px;
+}
+#action{
+    margin: 10px 0;
+}
+#action span{
+    margin-left: 10px;
+}
+#resolve, #clear{
+    border: 1px solid #CCC;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+.border-right{
+    border-right: 1px solid #CCC;
+}
+.border-bottom{
+    border-bottom: 1px solid #CCC;
+}
+.special, .select{
+    background: #EBF2FA;
+}
+.has{
+    background: #EEE;
+}
+
